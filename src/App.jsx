@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { AuthProvider } from './Context/auth';
-import { Home, Private, Profile, RoomDetails, SignIn, SignUp } from './pages';
+import { Home, Private, Profile, RoomDetails, Login, SignUp } from './pages';
 import { Footer, Navbar } from './Compoennts'; // Corrected spelling: 'Components'
 import { Routes, Route } from 'react-router-dom'; // Consolidated imports from 'react-router-dom'
 
@@ -18,7 +18,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/property/:id" element={<RoomDetails />} />
-            <Route path="/sign-in" element={<SignIn />} /> 
+            <Route path="/sign-in" element={<Login />} /> 
             <Route path="/sign-up" element={<SignUp />} />
 
             <Route path="/user" element={<Private/>}>
