@@ -1,4 +1,4 @@
-import SignIn from "./Auth/signIn";
+import SignIn from "./Auth/SignIn";
 import Home from "./Home/Home";
 import RoomDetails from "./RoomDetails/RoomDetails";
 import SignUp from "./Auth/SignUp";
