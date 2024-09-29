@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { CardComp } from '../../Compoennts';
+import { CardComp, Loader } from '../../Compoennts';
 import styles from './Home.module.scss'
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -29,7 +29,7 @@ const Home = () => {
   useEffect(()=>{
     getAllProperties()
 
-  },[query])
+  },[])
 
   const getAllProperties= async ()=>{
     try{
@@ -68,10 +68,11 @@ const Home = () => {
     </form>
 
     </div>
-    <h1 className={styles.heading}>Properties</h1>
+    <h1 className={styles.heading}>Available Hotels</h1>
 
-    
-    <div className={styles.properties} style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
+    {
+      properties.length===0?<Loader/>:
+      <div className={styles.properties} style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
 
     {searchProp?.map((hotel,index) => (
         <Link key={index} to={`/property/${hotel?._id}`} id={styles.link}>
@@ -85,6 +86,9 @@ const Home = () => {
         </Link>
       ))}
     </div>
+      
+    }
+
     </div>
   );
 };

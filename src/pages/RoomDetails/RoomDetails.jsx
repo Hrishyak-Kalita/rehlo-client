@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './RoomDetails.module.scss';
-import { Amenities, BookingForm, Reviews } from '../../Compoennts';
+import { Amenities, BookingForm, Loader, Reviews } from '../../Compoennts';
 //  import DummyroomData from '../../assets/RoomDetail.json' 
 import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
@@ -36,7 +36,7 @@ const RoomDetails = () => {
   };
 
   if (!roomData) {
-    return <div>Loading...</div>; 
+    return <Loader/> 
   }
 
 

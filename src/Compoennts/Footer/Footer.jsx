@@ -31,8 +31,8 @@ const Footer = () => {
         <div className={styles.footerSection}>
           <h2 className={styles.footerTitle}>Contact Us</h2>
           <ul className={styles.contactInfo}>
-            <li>Email: info@hotel.com</li>
-            <li>Phone: +1 (800) 123-4567</li>
+            <li>Email: info@rehlo.com</li>
+            <li>Phone: +91 31234567</li>
             <li>Location: 123 Hotel St., New York, NY</li>
           </ul>
           <div className={styles.socialIcons}>
@@ -51,7 +51,7 @@ const Footer = () => {
       </div>
 
       <div className={styles.footerBottom}>
-        <p>© {new Date().getFullYear()} Hotel Name. All Rights Reserved.</p>
+        <p>© {new Date().getFullYear()} RehLo. All Rights Reserved.</p>
       </div>
     </div>
   );
