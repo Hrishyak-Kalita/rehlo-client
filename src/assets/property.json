@@ -1,0 +1,143 @@
+[
+  {
+    "title": "Luxury Suite at Oceanview Resort",
+    "location": "Miami Beach, Florida, USA",
+    "description": "A luxurious suite with stunning ocean views, perfect for a relaxing getaway.",
+    "capacity": 4,
+    "price": 299,
+    "images": [
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=60",
+      "https://images.unsplash.com/photo-1576675783824-89d631d2a186?auto=format&fit=crop&w=800&q=60",
+      "https://images.unsplash.com/photo-1503152394-dff102e4776e?auto=format&fit=crop&w=800&q=60"
+    ],
+    "email": "contact@oceanviewresort.com",
+    "amenityIds": ["wifi", "pool", "gym", "parking"],
+    "hostedBy": "Oceanview Hospitality",
+    "organisation": "private",
+    "hotelPolicies": [
+      "Check-in: 3:00 PM - 5:00 PM",
+      "Check-out: 11:00 AM",
+      "No pets allowed",
+      "Non-smoking rooms",
+      "Free cancellation within 24 hours"
+    ],
+    "rating": 4.7,
+    "reviews": [
+      {
+        "rate": 5,
+        "name": "John Doe",
+        "comment": "Amazing stay! The view was incredible and the service was top-notch."
+      },
+      {
+        "rate": 4,
+        "name": "Jane Smith",
+        "comment": "Great location and amenities. The room was very clean."
+      }
+    ],
+    "currentBookings": [
+      {
+        "email": "guest1@example.com",
+        "phone": "+1234567890",
+        "capacity": 2,
+        "startDate": "2024-10-01T14:00:00Z",
+        "endDate": "2024-10-05T11:00:00Z"
+      }
+    ],
+    "createdAt": "2024-09-28T08:00:00Z",
+    "updatedAt": "2024-09-29T10:00:00Z"
+  },
+  {
+    "title": "Cozy Cabin in the Woods",
+    "location": "Aspen, Colorado, USA",
+    "description": "A charming cabin surrounded by nature, ideal for a peaceful retreat.",
+    "capacity": 6,
+    "price": 199,
+    "images": [
+      "https://images.unsplash.com/photo-1602852747868-e8367d427b55?auto=format&fit=crop&w=800&q=60",
+      "https://images.unsplash.com/photo-1617091509663-21cbece41948?auto=format&fit=crop&w=800&q=60",
+      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=60"
+    ],
+    "email": "contact@aspenwoods.com",
+    "amenityIds": ["wifi", "fireplace", "parking"],
+    "hostedBy": "Aspen Retreats",
+    "organisation": "private",
+    "hotelPolicies": [
+      "Check-in: 2:00 PM - 4:00 PM",
+      "Check-out: 10:00 AM",
+      "No pets allowed",
+      "Smoking permitted outside",
+      "Free cancellation within 48 hours"
+    ],
+    "rating": 4.5,
+    "reviews": [
+      {
+        "rate": 5,
+        "name": "Alice Johnson",
+        "comment": "Absolutely loved the cabin! It was so cozy and clean."
+      },
+      {
+        "rate": 4,
+        "name": "Bob Brown",
+        "comment": "Great location for hiking. Would definitely come back."
+      }
+    ],
+    "currentBookings": [
+      {
+        "email": "guest3@example.com",
+        "phone": "+1122334455",
+        "capacity": 4,
+        "startDate": "2024-11-01T14:00:00Z",
+        "endDate": "2024-11-05T11:00:00Z"
+      }
+    ],
+    "createdAt": "2024-09-28T09:00:00Z",
+    "updatedAt": "2024-09-29T11:00:00Z"
+  },
+  {
+    "title": "Modern Apartment Downtown",
+    "location": "New York City, New York, USA",
+    "description": "Stylish apartment in the heart of the city, close to all major attractions.",
+    "capacity": 2,
+    "price": 249,
+    "images": [
+      "https://images.unsplash.com/photo-1606787620161-3b42f5eaaa16?auto=format&fit=crop&w=800&q=60",
+      "https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=800&q=60",
+      "https://images.unsplash.com/photo-1560184897-d602f02dc8e1?auto=format&fit=crop&w=800&q=60"
+    ],
+    "email": "contact@nycapartment.com",
+    "amenityIds": ["wifi", "gym", "parking"],
+    "hostedBy": "NYC Rentals",
+    "organisation": "private",
+    "hotelPolicies": [
+      "Check-in: 4:00 PM - 10:00 PM",
+      "Check-out: 11:00 AM",
+      "No parties allowed",
+      "Non-smoking rooms only",
+      "Free cancellation within 24 hours"
+    ],
+    "rating": 4.9,
+    "reviews": [
+      {
+        "rate": 5,
+        "name": "Michael Green",
+        "comment": "Fantastic location! The apartment was perfect for my stay."
+      },
+      {
+        "rate": 4,
+        "name": "Emily White",
+        "comment": "Very clean and modern. Would recommend."
+      }
+    ],
+    "currentBookings": [
+      {
+        "email": "guest4@example.com",
+        "phone": "+2233445566",
+        "capacity": 2,
+        "startDate": "2024-10-12T14:00:00Z",
+        "endDate": "2024-10-15T11:00:00Z"
+      }
+    ],
+    "createdAt": "2024-09-28T10:00:00Z",
+    "updatedAt": "2024-09-29T12:00:00Z"
+  }
+]

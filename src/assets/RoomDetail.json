@@ -1,0 +1,59 @@
+{
+  "title": "Luxury Suite at Oceanview Resort",
+  "location": "Miami Beach, Florida, USA",
+  "description": "A luxurious suite with stunning ocean views, perfect for a relaxing getaway.",
+  "capacity": 4,
+  "price": 299,
+  "images": [
+    "https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "https://example.com/images/room2.jpg",
+    "https://example.com/images/room3.jpg"
+  ],
+  "email": "contact@oceanviewresort.com",
+  "amenityIds": [
+    "wifi",
+    "pool",
+    "gym",
+    "parking"
+  ],
+  "hostedBy": "Oceanview Hospitality",
+  "organisation": "private",
+  "hotelPolicies": [
+    "Check-in: 3:00 PM - 5:00 PM",
+    "Check-out: 11:00 AM",
+    "No pets allowed",
+    "Non-smoking rooms",
+    "Free cancellation within 24 hours"
+  ],
+  "rating": 4.7,
+  "reviews": [
+    {
+      "rate": 5,
+      "name": "John Doe",
+      "comment": "Amazing stay! The view was incredible and the service was top-notch."
+    },
+    {
+      "rate": 4,
+      "name": "Jane Smith",
+      "comment": "Great location and amenities. The room was very clean."
+    }
+  ],
+  "currentBookings": [
+    {
+      "email": "guest1@example.com",
+      "phone": "+1234567890",
+      "capacity": 2,
+      "startDate": "2024-10-01T14:00:00Z",
+      "endDate": "2024-10-05T11:00:00Z"
+    },
+    {
+      "email": "guest2@example.com",
+      "phone": "+0987654321",
+      "capacity": 3,
+      "startDate": "2024-10-10T15:00:00Z",
+      "endDate": "2024-10-15T12:00:00Z"
+    }
+  ],
+  "createdAt": "2024-09-28T08:00:00Z",
+  "updatedAt": "2024-09-29T10:00:00Z"
+}

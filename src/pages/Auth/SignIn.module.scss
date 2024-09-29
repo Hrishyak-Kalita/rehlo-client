@@ -1,0 +1,82 @@
+/* SignInPage.module.scss */
+.signinContainer {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 90vh;
+    height: fit-content;
+  
+    .leftSide {
+      flex: 1;
+      background: #f4f4f4;
+  
+      .leftImage {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  
+    .rightSide {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      background-color: #fff;
+  
+      h2 {
+        margin-bottom: 1.5rem;
+        font-size: 2rem;
+        color: #333;
+      }
+  
+      .signinForm {
+        width: 100%;
+        max-width: 400px;
+  
+        .formGroup {
+          margin-bottom: 1rem;
+  
+          label {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+          }
+  
+          input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+          }
+        }
+  
+        .submitBtn {
+          width: 100%;
+          padding: 0.75rem;
+          background-color: #28a745;
+          color: white;
+          border: none;
+          border-radius: 4px;
+          font-size: 1rem;
+          cursor: pointer;
+  
+          &:hover {
+            background-color: #218838;
+          }
+        }
+      }
+    }
+  
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .leftSide,
+      .rightSide {
+        flex: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+  

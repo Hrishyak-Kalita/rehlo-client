@@ -1,0 +1,30 @@
+.reviewContainer {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+  }
+  
+  .reviewHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .reviewerName {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: black;
+  }
+  
+  .reviewRating {
+    color: #ffcc00; // Change to a color of your choice
+  }
+  
+  .reviewComment {
+    margin-top: 8px;
+    font-size: 1rem;
+    color: #333;
+  }
+  
