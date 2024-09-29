@@ -139,5 +139,162 @@
     ],
     "createdAt": "2024-09-28T10:00:00Z",
     "updatedAt": "2024-09-29T12:00:00Z"
+  },
+  {
+    "title": "Secluded Lakefront Cottage",
+    "location": "Lake Placid, New York, USA",
+    "description": "A peaceful lakeside cottage with private dock and beautiful nature views.",
+    "capacity": 6,
+    "price": 275,
+    "images": [
+      "https://images.unsplash.com/photo-1502899576159-f224dc2349ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGxha2UlMjBjb3R0YWdlfGVufDB8fHx8MTY5NTI4ODIwOQ&ixlib=rb-4.0.3&q=80&w=1080",
+      "https://example.com/images/lakefront2.jpg",
+      "https://example.com/images/lakefront3.jpg"
+    ],
+    "email": "contact@lakeplacidcottage.com",
+    "amenityIds": [
+      "wifi",
+      "kayak",
+      "fireplace",
+      "parking"
+    ],
+    "hostedBy": "Lake Placid Stays",
+    "organisation": "private",
+    "hotelPolicies": [
+      "Check-in: 3:00 PM - 6:00 PM",
+      "Check-out: 11:00 AM",
+      "No pets allowed",
+      "Non-smoking rooms",
+      "Free cancellation within 72 hours"
+    ],
+    "rating": 4.8,
+    "reviews": [
+      {
+        "rate": 5,
+        "name": "David Summer",
+        "comment": "A perfect retreat! The lake was serene and beautiful."
+      },
+      {
+        "rate": 4,
+        "name": "Olivia Stone",
+        "comment": "Very peaceful and charming location."
+      }
+    ],
+    "currentBookings": [
+      {
+        "email": "guest8@example.com",
+        "phone": "+6677889900",
+        "capacity": 4,
+        "startDate": "2024-11-10T14:00:00Z",
+        "endDate": "2024-11-14T11:00:00Z"
+      }
+    ],
+    "createdAt": "2024-09-28T14:00:00Z",
+    "updatedAt": "2024-09-29T16:00:00Z"
+  },
+  {
+    "title": "Luxury Ski Chalet",
+    "location": "Whistler, British Columbia, Canada",
+    "description": "An upscale ski-in, ski-out chalet with modern amenities and mountain views.",
+    "capacity": 12,
+    "price": 799,
+    "images": [
+      "https://images.unsplash.com/photo-1519923044980-79a906d50e8d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDV8fHNoYWxldCUyMHdoaXN0bGVyfGVufDB8fHx8MTY5NTI4ODIwOQ&ixlib=rb-4.0.3&q=80&w=1080",
+      "https://example.com/images/ski-chalet2.jpg",
+      "https://example.com/images/ski-chalet3.jpg"
+    ],
+    "email": "contact@whistlerskichalet.com",
+    "amenityIds": [
+      "wifi",
+      "skiStorage",
+      "fireplace",
+      "parking",
+      "spa"
+    ],
+    "hostedBy": "Whistler Premier Properties",
+    "organisation": "private",
+    "hotelPolicies": [
+      "Check-in: 4:00 PM - 8:00 PM",
+      "Check-out: 11:00 AM",
+      "No smoking on property",
+      "Pets allowed with a fee",
+      "Free cancellation within 24 hours"
+    ],
+    "rating": 4.9,
+    "reviews": [
+      {
+        "rate": 5,
+        "name": "Emily Brown",
+        "comment": "An unforgettable ski vacation with stunning views!"
+      },
+      {
+        "rate": 5,
+        "name": "Chris Red",
+        "comment": "Luxurious and cozy! The perfect winter getaway."
+      }
+    ],
+    "currentBookings": [
+      {
+        "email": "guest9@example.com",
+        "phone": "+7766554433",
+        "capacity": 8,
+        "startDate": "2024-12-01T14:00:00Z",
+        "endDate": "2024-12-07T11:00:00Z"
+      }
+    ],
+    "createdAt": "2024-09-28T15:00:00Z",
+    "updatedAt": "2024-09-29T17:00:00Z"
+  },
+  {
+    "title": "Historic Villa in Tuscany",
+    "location": "Florence, Tuscany, Italy",
+    "description": "A beautiful 18th-century villa surrounded by olive groves and vineyards.",
+    "capacity": 10,
+    "price": 699,
+    "images": [
+      "https://images.unsplash.com/photo-1573497491208-6b1acb260507?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fHR1c2NhbnklMjB2aWxsYXxlbnwwfHx8fDE2OTUyODgyMDk&ixlib=rb-4.0.3&q=80&w=1080",
+      "https://example.com/images/tuscany-villa2.jpg",
+      "https://example.com/images/tuscany-villa3.jpg"
+    ],
+    "email": "contact@tuscanyvilla.com",
+    "amenityIds": [
+      "wifi",
+      "pool",
+      "parking",
+      "garden"
+    ],
+    "hostedBy": "Tuscan Getaways",
+    "organisation": "private",
+    "hotelPolicies": [
+      "Check-in: 3:00 PM - 6:00 PM",
+      "Check-out: 11:00 AM",
+      "No pets allowed",
+      "Non-smoking rooms",
+      "Free cancellation within 72 hours"
+    ],
+    "rating": 4.8,
+    "reviews": [
+      {
+        "rate": 5,
+        "name": "Sophia Green",
+        "comment": "The perfect place for a family vacation. The villa is gorgeous!"
+      },
+      {
+        "rate": 4,
+        "name": "James Blue",
+        "comment": "Fantastic views and very spacious, loved the gardens."
+      }
+    ],
+    "currentBookings": [
+      {
+        "email": "guest10@example.com",
+        "phone": "+3344556677",
+        "capacity": 6,
+        "startDate": "2024-10-10T14:00:00Z",
+        "endDate": "2024-10-17T11:00:00Z"
+      }
+    ],
+    "createdAt": "2024-09-28T16:00:00Z",
+    "updatedAt": "2024-09-29T18:00:00Z"
   }
 ]

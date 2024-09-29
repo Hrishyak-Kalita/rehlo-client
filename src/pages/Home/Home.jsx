@@ -10,6 +10,7 @@ const Home = () => {
   const [query, setQuery] = useState('');
   const [searchProp,setSearchProp]=useState(properties)
   const {mainUser} = useAuth()
+  const proxy= import.meta.env.VITE_PROXY
 
 
   
@@ -33,7 +34,7 @@ const Home = () => {
   const getAllProperties= async ()=>{
     try{
 
-      const allProp=fetch("http://localhost:8080/api/v1/property/all-property")
+      const allProp=fetch(`${proxy}/property/all-property`)
       .then(response=> response.json())
       .then(data=>{
 

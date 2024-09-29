@@ -25,17 +25,17 @@ const Navbar = () => {
       </div>
       <div className={`${styles.menu} ${isOpen ? styles.active : ''}`}>
         <ul>
-          <li><a href="/shots">Shots</a></li>
-          <li><a href="/designers">Designers</a></li>
-          <li><a href="/jobs">Jobs</a></li>
-          <li><a href="/events">Events</a></li>
+          <li><a href="/">Shots</a></li>
+          <li><a href="/">Designers</a></li>
+          <li><a href="/">Jobs</a></li>
+          <li><a href="/">Events</a></li>
           <li className={styles.dropdown} onClick={toggleDropdown}>
             <span>Learn</span>
             {isDropdownOpen && (
               <ul className={styles.dropdownMenu}>
-                <li><a href="/tutorials">Tutorials</a></li>
-                <li><a href="/webinars">Webinars</a></li>
-                <li><a href="/workshops">Workshops</a></li>
+                <li><a href="/">Tutorials</a></li>
+                <li><a href="/">Webinars</a></li>
+                <li><a href="/">Workshops</a></li>
               </ul>
             )}
           </li>

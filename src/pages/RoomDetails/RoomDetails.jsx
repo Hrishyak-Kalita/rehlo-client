@@ -10,6 +10,7 @@ import { useState } from 'react';
 const RoomDetails = () => {
 
   const { id } = useParams();
+  const proxy= import.meta.env.VITE_PROXY
 
 
   // const [roomData, setRoomData] = useState({});
@@ -21,7 +22,7 @@ const RoomDetails = () => {
 
   const getProperty = async (_id) => {
     try {
-      const response = await fetch(`http://localhost:8080/api/v1/property/get-specific/${_id}`);
+      const response = await fetch(`${proxy}/property/get-specific/${_id}`);
       const data = await response.json();
 
       if (response.ok) {
