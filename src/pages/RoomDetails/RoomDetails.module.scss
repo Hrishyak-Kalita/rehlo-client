@@ -64,6 +64,9 @@
             font-size: 1.2rem;
             margin: 1rem 0;
             height: fit-content;
+            @media screen and (max-width:800px) {
+                font-size: 0.8rem;
+            }
             .owner{
                 color: black;
             }
@@ -85,6 +88,12 @@
 
         .amenities{
 
+            @media screen and (max-width:800px) {
+                h1{
+                    font-size: 1.5rem;
+                }
+            }
+
             .amenitiesList{
                 list-style: none;
                 .amenityItem{
@@ -94,6 +103,14 @@
         }
 
         .description{
+
+            @media screen and (max-width:800px) {
+                .desHead{
+                    font-size: 1.5rem;
+                }
+            }
+
+
             .desHead{
              padding: 1rem 0;
             }
@@ -125,6 +142,16 @@
               list-style:circle;
             }
           }
+
+        .reviewsBox{
+            padding: 1rem 0;
+            @media screen and (max-width:800px) {
+                h1{
+                    font-size: 1.5rem;
+                    
+                }
+            }
+        }
           
 
     }
@@ -138,4 +165,18 @@
         grid-template-columns: 1fr;
         
     }
+}
+
+@media screen and (max-width:900px) {
+    .hotelName{
+        font-size: 1.5rem;
+    }
+
+    .hotelLocation{
+        font-size: 1.5rem;
+    }
+    .subHeading{
+        font-size: 1rem;
+    }
+
 }

@@ -7,8 +7,6 @@ import { Routes, Route } from 'react-router-dom'; // Consolidated imports from '
 
 function App() {
 
-  
-
   return (
     <div>
       <AuthProvider>

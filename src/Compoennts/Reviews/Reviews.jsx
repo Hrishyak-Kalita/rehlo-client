@@ -5,7 +5,7 @@ const Reviews = ({ name, rating, comment }) => {
   return (
     <div className={styles.reviewContainer}>
       <div className={styles.reviewHeader}>
-        <h3 className={styles.reviewerName}>{name}</h3>
+        <p className={styles.reviewerName}>{name}</p>
         <span className={styles.reviewRating}>★ {rating}</span>
       </div>
       <p className={styles.reviewComment}>{comment}</p>

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styles from './SignIn.module.scss'; // Import module.scss
 import { useEffect } from 'react';
-import {app } from '../../../firebaseConfig.js'
-import { getAuth , createUserWithEmailAndPassword} from "firebase/auth";
+import { app } from '../../../firebaseConfig.js'
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { useAuth } from '../../Context/auth.jsx';
 import { useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
@@ -15,10 +15,10 @@ const SignUp = () => {
   const [password, setPassword] = useState('');
   const [phone, setPhone] = useState('');
   const auth = getAuth(app);
-
   const { login, isAuthenticated } = useAuth()
   const location = useLocation()
   const navigate = useNavigate()
+  const proxy = import.meta.env.VITE_PROXY
 
   useEffect(() => {
     if (isAuthenticated) {
@@ -27,18 +27,19 @@ const SignUp = () => {
     }
   }, [isAuthenticated, location, navigate]);
 
-  const handleSubmit= async (e)=>{
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!name || !email || !password) {
       alert('All fields are required');
       return;
     }
-    await createUserWithEmailAndPassword(auth,email,password)
-    .then((userCredential) => {
+    await createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
         login(user?.accessToken)
+        createNewUserInDb()
         navigate('/')
         // ...
       })
@@ -48,11 +49,35 @@ const SignUp = () => {
         console.log(errorCode)
         console.log(errorMessage)
       });
+
+
+  }
+
+  const createNewUserInDb = async () => {
+    try {
+      const response = await fetch(`${proxy}/auth/add-new-user`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${localStorage.getItem('authToken')}`
+        },
+        body: JSON.stringify({
+          name, email, phone
+        })
+      })
+
+      const data = await response.json()
+      if (!data) console.log("Error creating new user")
+      else console.log(data)
+
+    } catch (err) {
+      console.log(err)
+    }
   }
 
 
 
-  
+
 
   return (
     <div className={styles.signinContainer}>
@@ -119,7 +144,7 @@ const SignUp = () => {
           </button>
         </form>
         <p>already have and account?
-        <Link to='/sign-in'>Sign in</Link>
+          <Link to='/sign-in'>Sign in</Link>
         </p>
       </div>
     </div>

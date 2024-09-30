@@ -50,31 +50,24 @@ const RoomDetails = () => {
         <div className={styles.capsule}>
           <div className='center'>
             <h1 className={styles.hotelLocation}>{roomData?.location}</h1>
-            <h3 className={styles.subHeading}>Single-day experience</h3>
-            <hr />
-            <p className={styles.ownerBlock}>Hosted by <span className={styles.owner}>
-              <em>{roomData?.hostedBy}</em></span>
-              <span className={styles.propTagPrivate}>{roomData?.organisation}</span>
-            </p>
-            <hr />
+            <h3 className={styles.subHeading}>₹{roomData?.price} /day</h3>
           </div>
-
           <p className={styles.ratings}>
             <span className={styles.ratingSpan}>★{roomData?.rating}</span>
             <a className={styles.reviewRef} href="/reviews">{roomData?.reviews.length} reviews</a>
           </p>
         </div>
 
-        <div className={styles.amenities}>
-          <h1 style={{ margin: "1rem 0" }}>Amenities</h1>
-          <Amenities />
-        </div>
 
         <div className={styles.description}>
           <h1 className={styles.desHead}>Description</h1>
           <p className={styles.desPara}>{roomData?.description}</p>
         </div>
 
+        <div className={styles.amenities}>
+          <h1 style={{ margin: "1rem 0" }}>Amenities</h1>
+          <Amenities />
+        </div>
         {/* Hotel Policies Section */}
         <div className={styles.hotelPolicies}>
           <h1 className={styles.policiesHead}>Hotel Policies</h1>

@@ -28,8 +28,9 @@ const Home = () => {
 
   useEffect(()=>{
     getAllProperties()
+    
 
-  },[])
+  },[query])
 
   const getAllProperties= async ()=>{
     try{
