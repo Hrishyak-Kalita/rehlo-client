@@ -3,13 +3,14 @@ import styles from './Navbar.module.scss';
 import { useAuth } from '../../Context/auth';
 import { Link } from 'react-router-dom';
 import { CgProfile } from "react-icons/cg";
+import { IoIosLogOut } from "react-icons/io";
 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const { isAuthenticated} = useAuth()
-
+  const { isAuthenticated,logout} = useAuth()
+  
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -21,16 +22,15 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
+        <img style={{height:"1.6rem"}} src="/favi.png" alt="icon" />
         <a href="/">RehLo</a>
       </div>
       <div className={`${styles.menu} ${isOpen ? styles.active : ''}`}>
         <ul>
-          <li><a href="/">Shots</a></li>
-          <li><a href="/">Designers</a></li>
-          <li><a href="/">Jobs</a></li>
+          <li><a href="/">Places</a></li>
+          <li><a href="/">My Bookings</a></li>
           <li><a href="/">Events</a></li>
           <li className={styles.dropdown} onClick={toggleDropdown}>
-            <span>Learn</span>
             {isDropdownOpen && (
               <ul className={styles.dropdownMenu}>
                 <li><a href="/">Tutorials</a></li>
@@ -45,6 +45,8 @@ const Navbar = () => {
       {
         isAuthenticated ? <div className={styles.actions}>
           <Link to='/user/profile'><CgProfile size={30} color='#FA6800'/></Link>
+          <Link to='/sign-in'><IoIosLogOut size={30} color='#FA6800' onClick={()=>{logout()}}/></Link>
+          
         </div> :
           <div className={styles.actions}>
             <a href="/sign-in" className={styles.signup}>Sign In</a>

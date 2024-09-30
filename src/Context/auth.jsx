@@ -1,5 +1,6 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
 
+import { getAuth } from 'firebase/auth';
 // Create the context
 const AuthContext = createContext();
 
@@ -7,6 +8,26 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [mainUser,setMainUser]= useState(null)
+  const authToken=getAuth();
+  const proxy=import.meta.env.VITE_PROXY
+
+  const sendToken=async()=>{
+    try{
+
+      await authToken().currentUser.getIdToken(/* forceRefresh */ true).then(function(idToken) {
+    
+        const data=  fetch(`${proxy}/auth/`)
+      }).catch(function(error) {
+        // Handle error
+        console.log(error)
+      });
+
+    }catch(err){
+      console.log(err)
+    }
+  }
+
+  
 
   useEffect(() => {
     // Check if user is already logged in (e.g., check for a token in local storage)
