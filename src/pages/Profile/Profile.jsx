@@ -3,7 +3,7 @@
   import { useAuth } from '../../Context/auth'; // Assume user data is available in Auth context
   import { useEffect } from 'react';
   import { useState } from 'react';
-  import Loader from '../../Compoennts/Loader/Loader'
+  import Loader from '../../Components/Loader/Loader'
   import EditProfile from './EditProfile';
   const Profile = () => {
     const { logout } = useAuth();

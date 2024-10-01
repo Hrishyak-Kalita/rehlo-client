@@ -15,7 +15,7 @@ const SignUp = () => {
   const [password, setPassword] = useState('');
   const [phone, setPhone] = useState('');
   const auth = getAuth(app);
-  const { login, isAuthenticated } = useAuth()
+  const { login, isAuthenticated ,setUser} = useAuth()
   const location = useLocation()
   const navigate = useNavigate()
   const proxy = import.meta.env.VITE_PROXY
@@ -39,7 +39,7 @@ const SignUp = () => {
         // Signed in 
         const user = userCredential.user;
         login(user?.accessToken)
-        createNewUserInDb()
+        setUser(user?.email)
         navigate('/')
         // ...
       })

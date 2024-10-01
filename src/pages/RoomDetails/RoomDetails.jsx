@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './RoomDetails.module.scss';
-import { Amenities, BookingForm, Loader, Reviews } from '../../Compoennts';
+import { Amenities, BookingForm, Loader, Reviews } from '../../Components';
 //  import DummyroomData from '../../assets/RoomDetail.json' 
 import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
@@ -11,9 +11,6 @@ const RoomDetails = () => {
 
   const { id } = useParams();
   const proxy= import.meta.env.VITE_PROXY
-
-
-  // const [roomData, setRoomData] = useState({});
   const [roomData, setRoomData] = useState();
 
   useEffect(() => {
@@ -64,6 +61,10 @@ const RoomDetails = () => {
           <p className={styles.desPara}>{roomData?.description}</p>
         </div>
 
+        <div className={styles.bookingForPhone}>
+            <BookingForm hotelId={id} price={roomData?.price}/>
+        </div>
+
         <div className={styles.amenities}>
           <h1 style={{ margin: "1rem 0" }}>Amenities</h1>
           <Amenities />
@@ -85,7 +86,7 @@ const RoomDetails = () => {
         </div>
       </div>
       <div className={styles.rightGrid}>
-        <BookingForm />
+        <BookingForm hotelId={id} price={roomData?.price}/>
       </div>
     </div>
   );

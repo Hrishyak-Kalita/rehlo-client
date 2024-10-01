@@ -1,0 +1,87 @@
+.reviewContainer {
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Display everything in one line */
+.reviewRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 1rem; /* Add some gap between items */
+}
+
+/* Reviewer Name */
+.reviewerName {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #FA6800; /* Accent color */
+  flex: 1;
+  white-space: nowrap; /* Prevent name from breaking into new line */
+}
+
+/* Rating */
+.reviewRating {
+  font-size: 1.2rem;
+  color: #FA6800; /* Accent color */
+  flex: 0.5;
+  text-align: center;
+}
+
+/* Comment */
+.reviewComment {
+  flex: 2;
+  font-size: 0.95rem;
+  color: #333;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-height: 20px; /* Initially restrict height */
+  transition: max-height 0.3s ease;
+}
+
+/* Expanded comment styling */
+.expanded {
+  white-space: normal;
+  text-overflow: initial;
+  max-height: none; /* Remove height restriction */
+}
+
+/* Review Date */
+.reviewDate {
+  font-size: 0.85rem;
+  color: #777;
+  text-align: right;
+  flex: 0.5;
+  white-space: nowrap;
+}
+
+/* Read More/Less Button */
+.readMoreBtn {
+  background: none;
+  border: none;
+  color: #FA6800; /* Accent color */
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.readMoreBtn:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .reviewRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .reviewComment {
+    white-space: normal; 
+    overflow: visible;  
+  }
+}
