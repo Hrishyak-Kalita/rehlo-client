@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { AuthProvider } from './Context/auth';
-import { Home, Private, Profile, RoomDetails, Login, SignUp } from './pages';
-import { Footer, Navbar } from './Compoennts'; // Corrected spelling: 'Components'
-import { Routes, Route } from 'react-router-dom'; // Consolidated imports from 'react-router-dom'
+import { Home, Private, Profile, RoomDetails, Login, SignUp, MyBookings, BookingPage } from './pages';
+import { Footer, Navbar } from './Components'; 
+import { Routes, Route } from 'react-router-dom'; 
 
 
 function App() {
@@ -21,6 +21,11 @@ function App() {
 
             <Route path="/user" element={<Private/>}>
               <Route path="profile" element={<Profile/>} /> 
+              <Route path="my-bookings" element={<MyBookings/>} /> 
+            </Route>
+            <Route path="/booking" element={<Private/>}>
+              <Route path="form/:id" element={<BookingPage/>} /> 
+              
             </Route>
           </Routes>
         </div>

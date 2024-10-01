@@ -1,0 +1,83 @@
+.bookingsContainer {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif; // Use a clean font
+
+  .heading {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333; // Heading color
+  }
+
+  .bookingsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px; // Gap between cards
+  }
+
+  .bookingCard {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9; // Light background for cards
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: translateY(-5px); // Elevate effect on hover
+    }
+  }
+
+  .hotelImage {
+    width: 100%;
+    height: 150px; // Fixed height for images
+    object-fit: cover;
+  }
+
+  .bookingInfo {
+    padding: 10px;
+    flex-grow: 1;
+
+    .hotelTitle {
+      font-size: 1.2rem;
+      margin: 5px 0;
+      color: #007bff; // Accent color for title
+    }
+
+    p {
+      margin: 5px 0;
+      font-size: 0.9rem; // Slightly smaller font size
+    }
+  }
+
+  .actionButtons {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+    button {
+      background-color: #007bff; // Primary button color
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: #0056b3; // Darker shade on hover
+      }
+
+      &:last-child {
+        background-color: #dc3545; // Danger color for delete
+      }
+
+      &:last-child:hover {
+        background-color: #c82333; // Darker shade for delete on hover
+      }
+    }
+  }
+}

@@ -1,0 +1,230 @@
+.bookingPageContainer {
+  display: flex;
+  min-height: 80vh;
+  justify-content: space-evenly;
+  padding: 3rem;
+  box-sizing: border-box; /* Ensure padding is included in the total width */
+  max-width: 100%; /* Prevents overflow */
+  background-color: #f9f9f9; /* Light background for contrast */
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 10px;
+    width: 100%; /* Make sure the container fits within the viewport */
+  }
+}
+
+.req {
+  color: rgb(244, 100, 47); /* Accent color for required fields */
+}
+
+.formSection, .summarySection {
+  width: 45%;
+  height: fit-content;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-sizing: border-box; /* Ensures padding is considered in width */
+  max-width: 100%; /* Prevents any overflow */
+
+  @media (max-width: 768px) {
+    width: 100%; /* Full width on smaller screens */
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+}
+
+.summarySection {
+  order: -1; /* Move the summary section above the form on mobile */
+
+  @media (min-width: 769px) {
+    order: 1; /* On larger screens, restore the original order */
+  }
+}
+
+.formSection {
+  order: 1; /* Form should stay below summary on mobile */
+
+  @media (min-width: 769px) {
+    order: 0; /* On larger screens, restore the original order */
+  }
+}
+
+.formHeader {
+  h3 {
+    margin-bottom: 10px;
+    color: rgb(244, 100, 47); /* Accent color for header */
+
+    @media (max-width: 768px) {
+      font-size: 1.2em;
+    }
+  }
+
+  p {
+    font-size: 0.9em;
+    color: #555; /* Slightly darker for contrast */
+
+    @media (max-width: 768px) {
+      font-size: 0.8em;
+    }
+  }
+}
+
+.bookingForm {
+  label {
+    display: block;
+    margin-bottom: 15px;
+
+    @media (max-width: 768px) {
+      font-size: 0.9em;
+    }
+  }
+
+  input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 10px; /* Increased padding for better interaction */
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    transition: border-color 0.3s; /* Smooth transition for focus effect */
+
+    &:focus {
+      border-color: rgb(244, 100, 47); /* Accent color on focus */
+      outline: none; /* Remove default outline */
+    }
+
+    @media (max-width: 768px) {
+      padding: 8px;
+    }
+  }
+}
+
+.mobileInput {
+  display: flex;
+
+  select {
+    width: 20%;
+    padding: 8px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+
+    &:focus {
+      border-color: rgb(244, 100, 47); /* Accent color on focus */
+    }
+
+    @media (max-width: 768px) {
+      width: 30%;
+      padding: 6px;
+    }
+  }
+
+  input[type="text"] {
+    width: 80%;
+    padding: 8px;
+    box-sizing: border-box;
+
+    @media (max-width: 768px) {
+      padding: 6px;
+    }
+  }
+}
+
+.bookingForm button {
+  border: none;
+  padding: 12px; /* Increased padding for button */
+  border-radius: 5px;
+  background-color: rgb(244, 100, 47);
+  color: white;
+  margin-top: 10px;
+  width: 100%; /* Ensure the button takes full width on mobile */
+  box-sizing: border-box;
+  font-weight: bold; /* Bold text for emphasis */
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: rgb(220, 80, 30); /* Darker shade on hover */
+  }
+
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
+}
+
+.summarySection {
+  h4 {
+    margin-bottom: 5px;
+    color: rgb(244, 100, 47); /* Accent color for summary header */
+
+    @media (max-width: 768px) {
+      font-size: 1.3em;
+    }
+  }
+
+  p {
+    margin: 5px 0;
+    font-size: 0.95em;
+
+    @media (max-width: 768px) {
+      font-size: 0.85em;
+    }
+  }
+
+  .ratings {
+    font-weight: bold;
+    color: green;
+
+    @media (max-width: 768px) {
+      font-size: 0.85em;
+    }
+  }
+}
+
+.bookingInfo {
+  .bookingItem {
+    margin: 10px 0;
+    font-size: 0.9em;
+
+    @media (max-width: 768px) {
+      font-size: 0.8em;
+    }
+  }
+
+  .priceInfo {
+    div {
+      display: flex;
+      justify-content: space-between;
+      margin: 5px 0;
+      font-size: 0.9em;
+
+      @media (max-width: 768px) {
+        font-size: 0.8em;
+      }
+    }
+
+    .totalPrice {
+      font-weight: bold;
+      font-size: 1.2em;
+
+      @media (max-width: 768px) {
+        font-size: 1em;
+      }
+    }
+  }
+
+  .bookingAlert {
+    color: red;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 0.9em;
+
+    @media (max-width: 768px) {
+      font-size: 0.8em;
+    }
+  }
+}

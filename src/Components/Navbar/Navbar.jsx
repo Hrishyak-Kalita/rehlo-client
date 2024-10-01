@@ -28,7 +28,7 @@ const Navbar = () => {
       <div className={`${styles.menu} ${isOpen ? styles.active : ''}`}>
         <ul>
           <li><a href="/">Places</a></li>
-          <li><a href="/">My Bookings</a></li>
+          <li><a href="/user/my-bookings">My Bookings</a></li>
           <li><a href="/">Events</a></li>
           <li className={styles.dropdown} onClick={toggleDropdown}>
             {isDropdownOpen && (

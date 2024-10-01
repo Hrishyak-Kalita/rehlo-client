@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { CardComp, Loader } from '../../Compoennts';
+import { CardComp, Loader } from '../../Components';
 import styles from './Home.module.scss'
 import { useState } from 'react';
 import { useEffect } from 'react';
