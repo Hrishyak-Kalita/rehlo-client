@@ -1,16 +1,12 @@
 import React from 'react';
 import styles from './RoomDetails.module.scss';
 import { Amenities, BookingForm, Loader, Reviews } from '../../Components';
-//  import DummyroomData from '../../assets/RoomDetail.json' 
 import { useParams } from 'react-router-dom';
-import { useEffect } from 'react';
-import { useState } from 'react';
-
+import { useEffect, useState } from 'react';
 
 const RoomDetails = () => {
-
   const { id } = useParams();
-  const proxy= import.meta.env.VITE_PROXY
+  const proxy = import.meta.env.VITE_PROXY;
   const [roomData, setRoomData] = useState();
 
   useEffect(() => {
@@ -33,43 +29,38 @@ const RoomDetails = () => {
   };
 
   if (!roomData) {
-    return <Loader/> 
+    return <Loader />;
   }
-
 
   return (
     <div className={styles.container}>
       <div className={styles.leftGrid}>
-        <h1 className={styles.hotelName}>{roomData?.title}</h1>
+
         <div className={styles.roomCover}>
           <img src={roomData?.images[0]} alt={`Room at ${roomData?.title}`} />
         </div>
+
         <div className={styles.capsule}>
-          <div className='center'>
-            <h1 className={styles.hotelLocation}>{roomData?.location}</h1>
-            <h3 className={styles.subHeading}>₹{roomData?.price} /day</h3>
-          </div>
-          <p className={styles.ratings}>
-            <span className={styles.ratingSpan}>★{roomData?.rating}</span>
-            <a className={styles.reviewRef} href="/reviews">{roomData?.reviews.length} reviews</a>
-          </p>
+          <h1 className={styles.hotelName}>{roomData?.title} <span style={{ color: "#FA6800" }} className={styles.ratingSpan}>★{roomData?.rating}</span></h1>
+          <p className={styles.subHeading}>{roomData?.location}</p>
+          <p className={styles.subHeading}>₹{roomData?.price} /day</p>
         </div>
 
 
         <div className={styles.description}>
           <h1 className={styles.desHead}>Description</h1>
-          <p className={styles.desPara}>{roomData?.description}</p>
+          <p className={styles.desPara}>{roomData?.description} Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus officiis alias ea natus, eaque animi, ut illo vel praesentium perferendis facere hic repellendus, pariatur aliquam vero? Mollitia ducimus magni ea? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis architecto fugiat ex minus magnam eveniet earum quidem non impedit harum suscipit in doloremque minima labore, maiores, aliquid quae possimus temporibus.</p>
         </div>
 
         <div className={styles.bookingForPhone}>
-            <BookingForm hotelId={id} price={roomData?.price}/>
+          <BookingForm hotelId={id} price={roomData?.price} />
         </div>
 
         <div className={styles.amenities}>
-          <h1 style={{ margin: "1rem 0" }}>Amenities</h1>
+          <h1 style={{ margin: '1rem 0' }}>Amenities</h1>
           <Amenities />
         </div>
-        {/* Hotel Policies Section */}
+
         <div className={styles.hotelPolicies}>
           <h1 className={styles.policiesHead}>Hotel Policies</h1>
           <ul className={styles.policiesList}>
@@ -80,13 +71,15 @@ const RoomDetails = () => {
         </div>
 
         <div className={styles.reviewsBox}>
-        <h1>Reviews</h1>
-        {roomData?.reviews.map((item,index)=> <Reviews key={index} name={item?.name} comment={item?.comment} rating={item?.rate} /> )}
-
+          <h1>Reviews</h1>
+          {roomData?.reviews.map((item, index) => (
+            <Reviews key={index} name={item?.name} comment={item?.comment} rating={item?.rate} />
+          ))}
         </div>
       </div>
+
       <div className={styles.rightGrid}>
-        <BookingForm hotelId={id} price={roomData?.price}/>
+        <BookingForm hotelId={id} price={roomData?.price} />
       </div>
     </div>
   );
