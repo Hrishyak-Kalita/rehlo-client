@@ -73,7 +73,7 @@ const Home = () => {
                     {hotel?.size || "N/A"} / {hotel?.capacity || "N/A"} person
                   </p>
                   <p className={styles.hotelDescription}>
-                    {hotel?.description.slice(0,100) || "This is a beautiful property with modern amenities."}
+                    {hotel?.description?.slice(0,100) || "This is a beautiful property with modern amenities."}
                   </p>
                 </div>
               </div>
